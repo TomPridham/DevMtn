@@ -1,0 +1,323 @@
+html{
+    box-sizing: border-box
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family: Verdana, sans-serif;
+    color: white;
+}
+
+.top-home-main{
+    background: url("../images/wot-masthead-dark.jpg") center no-repeat;
+    height: 400px;
+    width: 100%;
+    z-index: -1;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.navbar{
+    display: inline;
+    height: 120px;;
+}
+.nav-wrapper{
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    width: 75%;
+    font-size: 100%;
+    padding-top: 2.5%;
+    align-items: center;
+}
+
+.logo{
+    background: url("/images/wot-logo-whitex2.svg") center no-repeat;
+    height:15%;
+    width: 15%;
+    position: absolute;
+}
+
+.green-button{
+    background: #BDD435;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border-radius:4px;
+    border:1px solid #4b8f29;
+    cursor:pointer;
+    padding:6px 20px;
+    font-family:inherit;
+    font-size:inherit;
+    color: inherit;
+}
+
+.white-bar{
+    background: #FFFFFF;
+    height:10px;
+    width:100px;
+    display: flex;
+    justify-content: center;
+}
+.center{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+.center-line{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width:80%;
+}
+.big{
+    font-size: 25vh;
+}
+.medium{
+    font-size:4vh;
+}
+
+.small{
+    font-size:2vh;
+}
+.center-text{
+    text-align: center;
+}
+.stretch{
+    -webkit-transform: scale(1.5,3);
+    -moz-transform: scale(1.5,3);
+    -ms-transform: scale(1.5,3);
+    -o-transform: scale(1.5,3);
+    transform: scale(1.5,3);
+}
+
+.pad{
+    margin-top:3%;
+}
+.padb{
+    margin-bottom:3%;
+}
+.right{
+    position: absolute;
+}
+
+.border-left{
+    border-left: solid 2px #6B888D;
+}
+.green-text{
+    color: #BDD435;
+}
+
+.dark-text{
+    color: #6B888D;
+}
+.darker-text{
+    color: #40666D;
+}
+.orange-text{
+    color: #F77E3C;
+}
+.line-space{
+    line-height: 200%;
+}
+.gray-container{
+    background: #F0F0F0;
+    padding: 5% 15%;
+}
+.col-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.col{
+    display: flex;
+    text-align: center;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    margin:20px;
+    clear: both;
+}
+
+.cell{
+    display: flex;
+    justify-content:center;
+    margin: 2%;
+    height:100px;
+}
+img{
+    width:auto;
+    height:auto;
+}
+
+.right-arrow{
+    background: url("../images/sprites.png") -46px -292px;
+    height: 50px;
+    width: 50px;
+
+}
+
+.wrench{
+    background: url("../images/sprites.png") -22px -113px;
+    height: 150px;
+    width: 80px;
+}
+.lightbulb{
+    background: url("../images/sprites.png") -311px -100px;
+    height: 150px;
+    width: 130px;
+}
+.broken-arrow{
+    background: url("../images/sprites.png") -227px -91px;
+    height: 150px;
+    width: 80px;
+}
+
+.power{
+    background: url("../images/sprites.png") -119px -100px;
+    height: 150px;
+    width: 100px;
+}
+
+.red-giant{
+    background: url("../images/sprite_client_logos.jpg") 13px -7px;
+    height: 150px;
+    width: 200px;
+}
+.tool-farm{
+    background: url("../images/sprite_client_logos.jpg") 1px -136px;
+    height: 150px;
+    width: 215px;
+}
+.taylor-says{
+    background: url("../images/sprite_client_logos.jpg") -330px 1px;
+    height: 150px;
+    width: 215px;
+}
+.smart-sound{
+    background: url("../images/sprite_client_logos.jpg") -640px 1px;
+    height: 150px;
+    width: 215px;
+}
+.heels{
+    background: url("../images/sprite_client_logos.jpg") -314px -136px;;
+    height: 150px;
+    width: 215px;
+}
+.digi-effects{
+    background: url("../images/sprite_client_logos.jpg") -640px -136px;
+    height: 150px;
+    width: 215px;
+}
+.diet-direct{
+    background: url("../images/sprite_client_logos.jpg") 1px -280px;
+    height: 150px;
+    width: 215px;
+}
+.sirona{
+    background: url("../images/sprite_client_logos.jpg") -320px -280px;
+    height: 150px;
+    width: 215px;
+}
+.just-fab{
+    background: url("../images/sprite_client_logos.jpg") -640px -280px;
+    height: 150px;
+    width: 215px;
+}
+
+.wilmington{
+    background: url("../images/wilmington.jpg") no-repeat;
+    background-size: cover;
+    width:50%;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+}
+
+.asheville{
+    background: url("../images/asheville.jpg") no-repeat;
+    background-size: cover;
+    width: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+}
+.green-container{
+    background: #BDD435;
+    padding: 5% 15%;
+}
+
+.white-container{
+    background: #FFFFFF;
+    padding: 5% 15%;
+}
+.box-holder{
+    display: flex;
+    /* Or do it all in one line with flex flow */
+    flex-flow: row wrap;
+    /* tweak the where items line up on the row */
+    /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+    align-content: flex-start;
+    text-align: center;
+    justify-content: space-between;
+    margin:20px;
+}
+.white-box{
+    background: #FFFFFF;
+    padding:5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right:auto;
+    width:250px;
+    flex-basis: auto;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+
+}
+.client-holder{
+    display: flex;
+    /* Or do it all in one line with flex flow */
+    flex-flow: row wrap;
+    /* tweak the where items line up on the row */
+    /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+    align-content: flex-start;
+    text-align: center;
+    justify-content: space-between;
+    margin:20px;
+    width: 100%;
+    max-width: 800px;;
+}
+
+.picture-container{
+    height: 350px;
+    width: 100%;
+    display: flex;
+
+
+}
+
+.smoky-box{
+    opacity: .5;
+    background-color: #40666D;
+    width:60%;
+    height:40%;
+    margin:auto;
+
+}
+
+
+
+footer{
+    background: #788488;
+}

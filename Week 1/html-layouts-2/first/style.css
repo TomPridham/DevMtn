@@ -1,0 +1,59 @@
+html{
+    box-sizing: border-box
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+main{
+    width: 1200px;
+    height: 1200px;
+}
+
+.display-boxes{
+    width: 100%;
+    height: 16%;
+    display: flex;
+}
+
+.one{
+    background: #CF021B;
+    height:100%;
+    width: 33%;
+    float: left;
+}
+
+.two{
+    background: #4A8FE1;
+    height:100%;
+    width: 33%;
+    float: left;
+}
+
+.three{
+    background: #4A4A4A;
+    height:100%;
+    width: 33%;
+    float: left;
+}
+
+.content{
+
+}
+
+.margin{
+    margin: 1%;
+}
+.side-margin{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.bigger{
+    width: 66%;
+}
+
+.box {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
