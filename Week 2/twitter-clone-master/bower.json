@@ -1,0 +1,24 @@
+{
+  "name": "twitter-clone",
+  "description": "whatever",
+  "main": "index.html",
+  "authors": [
+    "Tom Pridham <pridham.tom@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/TomPridham/DevMtn",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-timeago": "timeago#^1.5.1",
+    "bootstrap": "^3.3.6"
+  }
+}
