@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listo</title>
+    <link rel="stylesheet" href="../app/styles/main.css">
+</head>
+<body>
+<section>
+    <h1 class="title">Listo</h1>
+</section>
+<form id="newTaskForm">
+
+
+    <input id="newItemInput" placeholder="New Task">
+    <div class="buttonHolder">
+        <button id="saveNewItem">Save</button>
+        <button id="cancel">Cancel</button>
+    </div>
+
+    <div class="panel">
+        <ul class=" list-group newList" id="newList" style="">New</ul>
+    </div>
+    <div class="panel">
+        <ul class="list-group currentList" id="currentList">In Progress</ul>
+    </div>
+    <div class="panel">
+        Archived
+        <ul class="list-group archivedList" id="archivedList"></ul>
+    </div>
+</form>
+<div class="list-group-item-container">
+    <label>
+        <input type="checkbox"/>
+    </label>
+    <div class="list-group-item" id="item">' bloop '</div>
+</div>
+
+<script defer src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script defer src ="../../../../../bower_components/jquery-labelauty/source/jquery-labelauty.js"></script>
+<script defer src="../app/scripts/app.js"></script>
+</body>
+</html>

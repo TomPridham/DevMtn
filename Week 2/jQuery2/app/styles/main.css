@@ -1,0 +1,80 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    background-color: #F5F5F5;
+    font-family: Verdana, sans-serif;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.panel{
+    display: inline-block;
+    background-color: white;
+    width: 100%;
+    border: solid 1px black;
+}
+.title{
+    font-size: 15vh;
+    color: hotpink;
+    text-align: center;
+    opacity:.4;
+}
+
+#newItemInput{
+    height:5vh;
+    font-size: 5vh;
+    -webkit-box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.45);
+    -moz-box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.45);
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.45);
+}
+
+.buttonHolder{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    margin:15px;
+}
+#saveNewItem, #cancel{
+    width:100%;
+    text-align: center;
+    font-size: 5vh;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    opacity: .6;
+
+}
+#saveNewItem{
+    margin-right: 5px;
+}
+#cancel{
+    margin-left: 5px;
+}
+
+.list-group{
+    font-size:4vh;
+
+}
+.list-group-item{
+    width:100%;
+    font-size: 3vh;;
+    background-color: white;
+    border-bottom: solid black 1px;
+    border-top: solid black 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+}
+
+
+.list-group-item-container{
+
+}
+
