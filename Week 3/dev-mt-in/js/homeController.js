@@ -2,12 +2,21 @@
  * Created by Tom on 2/15/2016.
  */
 
-var homeApp = angular.module('devMtIn');
 
-homeApp.controller('homeControl',function($scope){
+myApp.controller('homeControl', function ($scope, profileService) {
 
-    $scope.myProfile = {
-        friends: [{name: 'Ryan'}, {name: 'Bryan'}, {name: 'Sarah'}, {name: 'Zac'}, {name: 'Erin'}]
+    $scope.editing = false;
+
+    $scope.myProfile = profileService.checkForProfile();
+
+    $scope.saveProfile = function(){
+        profileService.saveProfile($scope.myProfile);
+        $scope.editing = false;
+    };
+
+    $scope.deleteProfile = function(){
+        profileService.deleteProfile($scope.myProfile);
+        $scope.myProfile = profileService.checkForProfile();
     };
 
     $scope.sortOptions = [{

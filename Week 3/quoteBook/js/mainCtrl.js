@@ -30,3 +30,6 @@ myApp.controller('mainControl', function ($scope, server) {
         }
     };
 });
+
+
+//todo  blackdiamond local storage excercise

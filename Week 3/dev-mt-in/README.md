@@ -143,7 +143,7 @@ Once that is complete you should be able to lock and unlock the profile fields, 
 ### Step Three: Saving to local storage
 The next step will be to set up local storage, letting our profiles persist between refreshes. We'll start in the html and work back to the service.
 
-The first thing we need to do is add `ng-model`s to the rest of our profile fields. Make sure these `ng-model`'s point to new properties on the `myProfile` object. Next, we will need an `ng-click` on the profile's 'Save' button. This `ng-cick` should invoke a function we will create on our controller named `saveProfile` and pass it `myProfile` as the only argument. This is all we need in our HTML. Next step: controller.
+The first thing we need to do is add `ng-model`s to the rest of our profile fields. Make sure these `ng-model`'s point to new properties on the `myProfile` object. Next, we will need an `ng-click` on the profile's 'Save' button. This `ng-click` should invoke a function we will create on our controller named `saveProfile` and pass it `myProfile` as the only argument. This is all we need in our HTML. Next step: controller.
 
 In `homeCtrl.js` create the `saveProfile` function and make sure it accepts a `profile` parameter. This function should simply call `profileService.saveProfile`, passing in the `profile` parameter as an argument, then set `$scope.editing` to false. It may seem odd to have a function who's only job is to pass data from the view to a service, but remember that the primary use of controllers is to act as a sort of middle-man. Controllers exist to communicate between the view and the services.
 
