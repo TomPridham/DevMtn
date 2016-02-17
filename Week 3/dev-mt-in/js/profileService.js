@@ -23,7 +23,7 @@ myApp.service('profileService', function ($http) {
     this.checkForProfile = function (profileId) {
         return $http({
             method: 'GET'
-            , url: baseUrl + 'api/profiles/' + profileId.profileId
+            , url: baseUrl + 'api/profiles/' + profileId
         });
     };
 

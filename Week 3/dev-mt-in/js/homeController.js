@@ -7,11 +7,12 @@ myApp.controller('homeControl', function ($scope, profileService) {
 
     $scope.editing = false;
 
+    $scope.myProfile = {};
 
     $scope.checkForProfile = function () {
 
         var profileId = JSON.parse(localStorage.getItem('profileId'));
-        if (profileId) {
+        if (profileId.profileId) {
             profileService.checkForProfile(profileId.profileId).
             then(function (profile) {
                 $scope.myProfile = profile.data;
@@ -46,4 +47,5 @@ myApp.controller('homeControl', function ($scope, profileService) {
             , value: true
         }
     ];
+    $scope.checkForProfile();
 });
