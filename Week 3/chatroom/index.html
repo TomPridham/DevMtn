@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html ng-app="chatroom">
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="mainCtrl">
+<div class="main-container">
+    <h1> DevMountain Chat Room </h1>
+    <div class="row container">
+        <form ng-submit="postData()">
+            <div class="inputs">
+                <input class="form-control text-box" type="text" ng-model="message" placeholder="Message">
+                <input type="text" class="form-control text-box" ng-model="search" placeholder="Search">
+            </div>
+        </form>
+        <div class="column sortButtons">
+            <button type="button" value="" class="btn btn-default"  ng-click="value='+'">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </button>
+            <button type="button" class="btn btn-default"  ng-click="value=''">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </button>
+        </div>
+    </div>
+    <div class="messages-container">
+        <p ng-repeat="message in messages | orderBy:sortOn:value">
+            {{message.text}} -
+            <time am-time-ago="message.createdAt"></time>
+        </p>
+
+    </div>
+</div>
+<script src="http://www.parsecdn.com/js/parse-1.2.19.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.0-beta.4/angular-moment.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/mainCtrl.js"></script>
+<script src="js/parseService.js"></script>
+<script src="js/defaultHeaders.js"></script>
+</body>
+</html>

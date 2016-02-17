@@ -9,8 +9,8 @@
 <main>
     <div ng-repeat="quote in quotes | filter:filt">{{quote.text}} - {{quote.author}}</div>
     <br>
-    <input type="text" placeholder="Quote Text" ng-model="textInput">{{textInput}}
-    <input type="text" placeholder="Quote Author" ng-model="authorInput">{{authorInput}}
+    <input type="text" placeholder="Quote Text" ng-model="textInput">
+    <input type="text" placeholder="Quote Author" ng-model="authorInput">
     <br>
     <button ng-click="addData()">Add Quote</button>
     <button ng-click="removeData()">Remove Quote</button>

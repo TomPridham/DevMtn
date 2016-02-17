@@ -7,16 +7,34 @@ myApp.controller('homeControl', function ($scope, profileService) {
 
     $scope.editing = false;
 
-    $scope.myProfile = profileService.checkForProfile();
 
-    $scope.saveProfile = function(){
+    $scope.checkForProfile = function () {
+
+        var profileId = JSON.parse(localStorage.getItem('profileId'));
+        if (profileId) {
+            profileService.checkForProfile(profileId.profileId).
+            then(function (profile) {
+                $scope.myProfile = profile.data;
+            }).catch(function (err) {
+                console.log(err);
+            })
+        }
+    };
+
+    $scope.saveProfile = function () {
         profileService.saveProfile($scope.myProfile);
         $scope.editing = false;
     };
 
-    $scope.deleteProfile = function(){
-        profileService.deleteProfile($scope.myProfile);
-        $scope.myProfile = profileService.checkForProfile();
+    $scope.deleteProfile = function () {
+        profileService.deleteProfile().
+        then(function(deletedProfile){
+            localStorage.removeItem('profileId')
+            $scope.myProfile = {};
+        }).
+        catch(function(err){
+            console.log(err);
+        })
     };
 
     $scope.sortOptions = [{
