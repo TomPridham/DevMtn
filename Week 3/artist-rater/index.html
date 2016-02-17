@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="artistApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-controller="mainController">
+<main>
+    <form>
+        <h1>Artist Info</h1>Artist Name:
+        <input type="text" ng-model="name" placeholder="Name">
+        Artist Genre:
+        <input type="text" ng-model="genre" placeholder="Genre">
+        Artist Rating:
+        <input type="number" ng-model="rating" placeholder="0-100">
+        <button type="submit" ng-click="addArtist()">Add</button>
+    </form>
+    <section>
+            <h2 ng-show="reallyLike.length != 0">Really Like</h2>
+
+        <div>
+            <div ng-repeat="artist in reallyLike">
+                <h4>Name: {{artist.name}}</h4>
+                <h4>Genre: {{artist.genre}}</h4>
+                <h4>Rating: {{artist.rating}}</h4>
+            </div>
+        </div>
+        <h2 ng-show="kindOfLike.length !=0">Kind of Like</h2>
+
+        <div>
+            <div ng-repeat="artist in kindOfLike">
+                <h4>Name: {{artist.name}}</h4>
+                <h4>Genre: {{artist.genre}}</h4>
+                <h4>Rating: {{artist.rating}}</h4>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="firstController.js"></script>
+<script src="service.js"></script>
+</body>
+</html>
