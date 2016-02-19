@@ -306,7 +306,7 @@ We will need a function in our controller to access `friendService.addFriend`. I
 
 The last step in adding friends will be to attach this function to our view. Let's add a new button inside of our potential friends `ng-repeat` with an `ng-click` that invokes the `addFriend` function passing in `friend._id`.
 
-You are now able to succesfully search and add friends!
+You are now able to successfully search and add friends!
 
 ### Step Two: Removing Friends.
 Let's add the functionality to remove friends as well. This will be very similar to our `addFriend` function. It will return an HTTP request with a method of put, a url of `baseUrl + '/api/friends/remove/' + userId`, and a data object of `{ friendId: friendId }`.
