@@ -1,0 +1,14 @@
+<html ng-app="myApp">
+<body ng-controller="main3">
+<main>
+    <input type="text" ng-model="query">
+    <div ng-repeat="item in items | filter:query">
+        {{item.name}} - {{item.email}}
+    </div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+<script src="service.js"></script>
+</body>
+</html>

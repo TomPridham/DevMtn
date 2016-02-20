@@ -1,0 +1,25 @@
+<html ng-app="myApp">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
+
+<body ng-controller="main6">
+<main>
+<h1>app6 - routing</h1>
+    <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+    <button><a ui-sref="home">Home</a></button>
+    <button><a ui-sref="about">About</a></button>
+
+    <br>
+    <br>
+    <br>
+    <div ui-view>
+
+    </div>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+<script src="service.js"></script>
+</body>
+</html>
