@@ -60,7 +60,7 @@ myApp.service('friendService', function ($http, $q) {
                 defer.resolve(profile);
                 return defer.promise;
             }
-        };
+        }
         getNextFriend();
     };
 });

@@ -50,11 +50,17 @@ This app is going to be very dependent on using **resolve** in the router. As we
 * In your teamService.js file make a method called `addNewGame`. This method is going to take in a gameObject as the parameter. That gameObj will eventually have data about each individual game that we'll send to parse.
   - In the addNewGame method create a variable called `url` and set it equal to `'https://api.parse.com/1/classes/' + gameObj.homeTeam;`. Notice each team's games are going to be stored at a RESTful endpoint which points to the teams specific name (gameObj.homeTeam).
   - After creating the url variable, make an if statement that is going to check to see if the home team score (gameObj.homeTeamScore) is greater then the opponents core (gameObj.opponentScore). If it is, set a property called 'won' on the gameObj to true. If it is not, (or if the home team lost), set that win property on the gameObj to false. One gotcha here is that gameObj.homeTeamScore and gameObj.opponentScore are both strings, you'll need to make them integers before you compare them. To do that, use the parseInt method. `parseInt("7")` will return 7 the integer.
+  
+  
   - Under your if statement, we're going make a POST request to parse to our URL we made earlier, sending `gameObj` as the data. So, return the result of making an $http request with the 'method' of 'POST', the 'url' being the URL variable we made earlier, and 'data' being our `gameObj`.
+  
+  
+  
 * Now that our service has an addNewGame method, let's make a `getTeamData` method which is going to accept a team parameter and fetch the data of that specific team. Create it and have it accept a parameter named team.
   - Create a deferred object using $q.defer(); then at the bottom of that function return that promise object (deferred.promise)
   - Create a variable called `url` which will be set to `'https://api.parse.com/1/classes/' + team;`
   - Now, make a 'GET' request using $http to the url of the variable we just made.
+  
   - We're not going to return that object but instead we're going to modify the data we got back from that request before we resolve our own promise we made earlier. So add a `.then` to the end of the $http request and give `.then` a function that accepts 'data' as the parameter. Remember, `data` will be the actual data we get back from parse when we make a GET request to the specified URL we made earlier.
     * Inside the `.then` function, make a variable called `results` and set it equal to `data.data.results`, which is the actual games the team has played.
     * Create two variables, one called `wins` and one called `losses` and set them both equal to `0`.
@@ -70,8 +76,15 @@ As I mentioned in step 1, setting up the router is perhaps the most important pa
 * Open up your app.js file. Create a state called `'home'` in your router, so that whenever the user is at the index page `'/'`, the templateUrl will be `js/home/homeTmpl.html` and the controller `'homeCtrl'`. We will complete the rest of this route a little later.
 * Now we're going to set up the individual team's routes. It's important to understand that all three teams (Jazz, Lakers, Heat) are going to be using the same Controller and the same Template.
   - Whenever the user goes to `'/teams/:team'` use `'js/teams/teamTmpl.html'` as the templateUrl and use `'teamCtrl'` as the controller. Name this state `'teams'`.
-  - Take note of the /:team that's in the URL. Remember, that makes it so your application is able to keep track of certain states based on which team is located in the URL. For example, when the user visits yoursite.com/teams/utahjazz, in our controller $stateParams.team is going to be equal to 'utahjazz'. This allows us to then pass in the specific team into our getTeamData method that's on our service and get only that teams data. Also note that the menu in our index.html page has links that point to the different teams (which will be caught by :team in our router).
+  - Take note of the /:team that's in the URL. Remember, that makes it so your application is able to keep track of certain states based on which team is located in the URL. For example, when the user visits yoursite.com/teams/utahjazz, in our controller $stateParams.team is going to be equal to 'utahjazz'. This allows us to then pass in the specific team into our getTeamData method that's on our service and get 
+  only that teams data. 
+  Also note that the menu in our index.html page has links that point to the different teams (which will be caught by :team in our router).
   - Now that our templateUrl and our controller are set up for the /teams/:team url, we want to have some data ready for us before that route loads. In this case, that data we want available in our controller is the specific teams data. Below where we specify the controller, create a resolve block with the key being `resolve:` and the value being an object.
+  
+  
+  
+  
+  
     * The resolve object is going to have a method called `teamData:` which returns the promise that gets returned from `teamService.getTeamData()`. To be able to use the method getTeamData, we need to inject `teamService` into the `teamData:` method by adding it as a parameter. That was really wordy I know. Look up the syntax for how resolve works. What's going to happen is we're going to call the getTeamData method on our teamService service. That will return a promise which will then be resolved and the data we get back from that promise will then be available to us in our controller as teamData, so head over to your teamCtrl.js file and add teamData as a parameter which is passed into your controller.
     * You might have noticed that we're calling the getTeamData method on our teamService service but that method requires a parameter which should be the specific team whose data we want, ie utahjazz, miamiheat, or losangeleslakers. Remember, we know which team's data we want to get based on the `:team` parameter in our route. We get access to that variable in our resolve block by using `$stateParams.team`. So now go ahead and inject `$stateParams` into the `teamData:` method, and pass `$stateParams.team` as the argument in the `teamService.getTeamData()` call.
 * Let's make one last change to the router for now. Add a `$urlRouterProvider.otherwise('/');` block so that the router will redirect to the index page if the route the user types in is not recognized.
