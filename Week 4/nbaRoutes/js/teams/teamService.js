@@ -38,7 +38,6 @@ app.service('teamService', function ($http, $q) {
                 results.wins = wins;
                 results.losses = losses;
                 defer.resolve(results)
-
             }
         );
         return defer.promise;
