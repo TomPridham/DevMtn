@@ -2,7 +2,7 @@
  * Created by Tom on 2/16/2016.
  */
 
-myApp.service('myService', function () {
+timeApp.service('myService', function () {
 
     this.reallyLike = [];
     this.kindOfLike = [];

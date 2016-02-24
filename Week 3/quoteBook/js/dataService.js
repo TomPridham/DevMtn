@@ -1,7 +1,7 @@
 /**
  * Created by Tom on 2/16/2016.
  */
-myApp.service('server', function () {
+timeApp.service('server', function () {
 
     var quotes = [
         {text: 'Life isn\'t about getting and having, it\'s about giving and being.', author: 'Kevin Kruse'},

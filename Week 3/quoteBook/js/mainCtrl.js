@@ -3,7 +3,7 @@
  */
 
 
-myApp.controller('mainControl', function ($scope, server) {
+timeApp.controller('mainControl', function ($scope, server) {
 
     $scope.quotes = server.getData();
 

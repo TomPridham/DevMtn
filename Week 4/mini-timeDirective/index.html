@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="timeApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<main ng-controller="mainCtrl">
+
+    <div>Hello {{name}}</div>
+
+    <show-time format="ctrlFormat" update="updateFormat()"></show-time>
+    <br><br>
+
+
+    <show-time format="ctrlFormat" update="updateFormat()"></show-time>
+</main>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/mainCtrl.js"></script>
+<script src="js/timeDirective.js"></script>
+</body>
+</html>

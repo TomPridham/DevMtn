@@ -1,7 +1,7 @@
 /**
  * Created by Tom on 2/18/2016.
  */
-myApp.service('friendService', function ($http, $q) {
+timeApp.service('friendService', function ($http, $q) {
     var baseUrl = 'http://connections.devmounta.in/';
 
     this.findFriends = function (userId, query) {

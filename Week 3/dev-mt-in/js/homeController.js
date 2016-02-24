@@ -3,7 +3,7 @@
  */
 
 
-myApp.controller('homeControl', function ($scope, profileService, friendService) {
+timeApp.controller('homeControl', function ($scope, profileService, friendService) {
 
     $scope.editing = false;
     $scope.potentialFriends = {};

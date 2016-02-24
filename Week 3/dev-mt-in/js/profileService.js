@@ -2,7 +2,7 @@
  * Created by Tom on 2/16/2016.
  */
 
-myApp.service('profileService', function ($http) {
+timeApp.service('profileService', function ($http) {
 
     var baseUrl = 'http://connections.devmounta.in/';
     this.saveProfile = function (profile) {

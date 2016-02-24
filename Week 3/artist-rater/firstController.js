@@ -1,7 +1,7 @@
 /**
  * Created by Tom on 2/16/2016.
  */
-myApp.controller('mainController', function ($scope, mainService) {
+timeApp.controller('mainController', function ($scope, mainService) {
 
     $scope.reallyLike = myService.reallyLike;
     $scope.kindOfLike = myService.kindOfLike;
