@@ -1,0 +1,9 @@
+<div>{{car.year}} {{car.make}} {{car.model}} with {{car.mileage}}. Available for {{car.price}}.
+    <br>
+    <form ng-submit='sendComment()'>
+        <input type='text' ng-model='newComment'>
+        <input type='submit' value='Send'>
+    </form>
+
+    <div ng-repeat="comment in comments">{{comment.text}}</div>
+</div>
