@@ -1,0 +1,12 @@
+<div>
+    <h1>{{thread.title}}</h1>
+    <h3>{{thread.username}}</h3>
+    <button ui-sref="threads">threadz</button>
+    <form name="newCommentForm">
+        <input type="text" ng-model="newCommentText" placeholder="comment..." required>
+        <input type="text" ng-model="username" placeholder="username..." required>
+        <button ng-disabled="newCommentForm.$invalid" ng-click="createComment(username, newCommentText)">add comment</button>
+    </form>
+
+    <div ng-repeat="comment in comments">{{comment.text}} - {{comment.username}}</div>
+</div>
