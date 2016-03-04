@@ -4,8 +4,8 @@
 
 module.exports = {
 
-    addHeaders: function (req, res, next) {
-        res.status(200).set({
+    addHeaders: function (request, response, next) {
+        response.status(200).set({
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'OPTIONS, GET, POST',
