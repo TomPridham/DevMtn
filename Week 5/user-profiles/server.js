@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var eSesh = require('express-sessions');
+var session = require('express-sessions');
 var cors = require('cors');
 var userCtrl = require('./controllers/userCtrl');
 var profileCtrl = require('./controllers/profileCtrl');
@@ -14,7 +14,7 @@ var corsOptions = {
 
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
-app.use(eSesh({"secret": config.sessionSecret}));
+app.use(session({"secret": config.sessionSecret}));
 
 var logger = function (req, res, next) {
     console.log('body --> ', req.body);
@@ -26,3 +26,5 @@ app.listen(port, function () {
     console.log('Listening on port', port);
 
 });
+
+app.post('/api/login', userCtrl.login);
