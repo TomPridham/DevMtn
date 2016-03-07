@@ -2,6 +2,10 @@
  * Created by Tom on 3/3/2016.
  */
 
+var config = require("../config.json");
+var secret = config.sessionSecret;
+var username = config.username;
+
 module.exports = {
 
     addHeaders: function (request, response, next) {
@@ -16,5 +20,13 @@ module.exports = {
         });
 
         next();
+    },
+    verifyUser: function(request, response, next){
+        console.log(secret);
+        if(request.pin === "secret"){
+            next();
+        }else{
+            response.status(401).json({"message":"You're not authorized to be here"});
+        }
     }
 };
