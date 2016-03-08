@@ -1,0 +1,60 @@
+2016-03-08T11:34:16.228-0700 I CONTROL  [initandlisten] MongoDB starting : pid=8728 port=27017 dbpath=C:\data\db\ 64-bit host=Red-Green
+2016-03-08T11:34:16.229-0700 I CONTROL  [initandlisten] targetMinOS: Windows Vista/Windows Server 2008
+2016-03-08T11:34:16.229-0700 I CONTROL  [initandlisten] db version v3.2.3
+2016-03-08T11:34:16.229-0700 I CONTROL  [initandlisten] git version: b326ba837cf6f49d65c2f85e1b70f6f31ece7937
+2016-03-08T11:34:16.229-0700 I CONTROL  [initandlisten] allocator: tcmalloc
+2016-03-08T11:34:16.229-0700 I CONTROL  [initandlisten] modules: none
+2016-03-08T11:34:16.229-0700 I CONTROL  [initandlisten] build environment:
+2016-03-08T11:34:16.229-0700 I CONTROL  [initandlisten]     distarch: x86_64
+2016-03-08T11:34:16.229-0700 I CONTROL  [initandlisten]     target_arch: x86_64
+2016-03-08T11:34:16.229-0700 I CONTROL  [initandlisten] options: {}
+2016-03-08T11:34:16.232-0700 I -        [initandlisten] Detected data files in C:\data\db\ created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2016-03-08T11:34:16.233-0700 W -        [initandlisten] Detected unclean shutdown - C:\data\db\mongod.lock is not empty.
+2016-03-08T11:34:16.235-0700 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2016-03-08T11:34:16.235-0700 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=4G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2016-03-08T11:34:16.611-0700 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2016-03-08T11:34:16.611-0700 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'C:/data/db/diagnostic.data'
+2016-03-08T11:34:16.617-0700 I NETWORK  [initandlisten] waiting for connections on port 27017
+2016-03-08T11:34:17.018-0700 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2016-03-08T11:39:15.207-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50656 #1 (1 connection now open)
+2016-03-08T11:39:44.211-0700 I NETWORK  [conn1] end connection 127.0.0.1:50656 (0 connections now open)
+2016-03-08T11:39:44.791-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50687 #2 (1 connection now open)
+2016-03-08T11:41:26.160-0700 I NETWORK  [conn2] end connection 127.0.0.1:50687 (0 connections now open)
+2016-03-08T11:41:26.733-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50791 #3 (1 connection now open)
+2016-03-08T11:43:36.812-0700 I NETWORK  [conn3] end connection 127.0.0.1:50791 (0 connections now open)
+2016-03-08T11:43:37.411-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50932 #4 (1 connection now open)
+2016-03-08T11:44:02.961-0700 I NETWORK  [conn4] end connection 127.0.0.1:50932 (0 connections now open)
+2016-03-08T11:44:03.654-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50959 #5 (1 connection now open)
+2016-03-08T11:44:24.077-0700 I NETWORK  [conn5] end connection 127.0.0.1:50959 (0 connections now open)
+2016-03-08T11:44:24.689-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50982 #6 (1 connection now open)
+2016-03-08T11:46:42.647-0700 I NETWORK  [conn6] end connection 127.0.0.1:50982 (0 connections now open)
+2016-03-08T11:46:43.254-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51164 #7 (1 connection now open)
+2016-03-08T11:48:17.841-0700 I NETWORK  [conn7] end connection 127.0.0.1:51164 (0 connections now open)
+2016-03-08T11:48:18.536-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51263 #8 (1 connection now open)
+2016-03-08T11:51:39.273-0700 I NETWORK  [conn8] end connection 127.0.0.1:51263 (0 connections now open)
+2016-03-08T11:51:39.904-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51542 #9 (1 connection now open)
+2016-03-08T11:53:27.898-0700 I NETWORK  [conn9] end connection 127.0.0.1:51542 (0 connections now open)
+2016-03-08T11:53:28.571-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51654 #10 (1 connection now open)
+2016-03-08T11:57:26.849-0700 I NETWORK  [conn10] end connection 127.0.0.1:51654 (0 connections now open)
+2016-03-08T11:57:27.539-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51900 #11 (1 connection now open)
+2016-03-08T12:00:36.647-0700 I NETWORK  [conn11] end connection 127.0.0.1:51900 (0 connections now open)
+2016-03-08T12:00:37.308-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50780 #12 (1 connection now open)
+2016-03-08T12:01:51.594-0700 I NETWORK  [conn12] end connection 127.0.0.1:50780 (0 connections now open)
+2016-03-08T12:01:52.217-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:61666 #13 (1 connection now open)
+2016-03-08T12:05:40.214-0700 I NETWORK  [conn13] end connection 127.0.0.1:61666 (0 connections now open)
+2016-03-08T12:05:40.808-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50299 #14 (1 connection now open)
+2016-03-08T12:08:42.443-0700 I NETWORK  [conn14] end connection 127.0.0.1:50299 (0 connections now open)
+2016-03-08T12:10:50.277-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50631 #15 (1 connection now open)
+2016-03-08T12:19:01.915-0700 I NETWORK  [conn15] end connection 127.0.0.1:50631 (0 connections now open)
+2016-03-08T12:19:46.259-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:65220 #16 (1 connection now open)
+2016-03-08T12:20:46.704-0700 I NETWORK  [conn16] end connection 127.0.0.1:65220 (0 connections now open)
+2016-03-08T12:20:47.294-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50016 #17 (1 connection now open)
+2016-03-08T12:20:50.786-0700 I NETWORK  [conn17] end connection 127.0.0.1:50016 (0 connections now open)
+2016-03-08T12:21:11.764-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50044 #18 (1 connection now open)
+2016-03-08T12:26:11.776-0700 I NETWORK  [conn18] end connection 127.0.0.1:50044 (0 connections now open)
+2016-03-08T12:26:12.381-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50352 #19 (1 connection now open)
+2016-03-08T12:29:34.459-0700 I NETWORK  [conn19] end connection 127.0.0.1:50352 (0 connections now open)
+2016-03-08T12:29:35.044-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:53843 #20 (1 connection now open)
+2016-03-08T12:32:21.407-0700 I NETWORK  [conn20] end connection 127.0.0.1:53843 (0 connections now open)
+2016-03-08T12:32:21.984-0700 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:54015 #21 (1 connection now open)
+2016-03-08T13:38:08.543-0700 I NETWORK  [conn21] end connection 127.0.0.1:54015 (0 connections now open)

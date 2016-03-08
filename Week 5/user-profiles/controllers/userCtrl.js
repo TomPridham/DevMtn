@@ -25,19 +25,37 @@ var users = [
 ];
 module.exports = {
     "login": function (request, response, next) {
-        for (var i = 0; i < users.length; i++) {
-            if (users[i].name === request.body.name) {
-                if (users[i].password === request.body.passowrd) {
-                    request.session.currentUser = users[i];
-                    response.send({userFound: true});
+        //finds current user
+        var index = users.findIndex(function (user) {
+            return user.name === request.body.name;
+        });
+        var user = users[index];
+
+        //validates user
+        if (user != -1) {
+            //checks password
+            if (user.password === request.body.password) {
+                request.session.currentUser = user;
+                request.session.friends = [];
+                //loops through user's friends
+                for (var i = 0; i < user.friends.length; i++) {
+                    //finds index of current friend in main users array
+                    index = users.findIndex(function (friend) {
+                        return friend.name === user.friends[i];
+                    });
+                    request.session.friends.push(users[index]);
                 }
-                //password didn't match
-                else {
-                    response.send({userFound: false});
-                }
+                response.status(200).send({userFound: true});
+            }
+            //password didn't match
+            else {
+                response.status(200).send({userFound: false});
             }
         }
-        //didn't find user
-        response.send({userFound: false});
+        else {
+            //didn't find user
+            response.status(200).send({userFound: false});
+
+        }
     }
 };

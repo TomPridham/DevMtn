@@ -26,4 +26,17 @@ var profiles = [
 ];
 module.exports = {
 
+    getProfile: function (request, response, next) {
+        var ret = [];
+        console.log(request.session.currentUser)
+        var friends = request.session.friends;
+        for (var i = 0; i < friends.length; i++) {
+            ret.push(profiles[profiles.indexOf(friends[i])])
+        }
+        response.status(200).json({
+            currentUser: request.session.currentUser,
+            friends: ret
+        });
+    }
+
 };
