@@ -22,8 +22,8 @@ module.exports = {
         next();
     },
     verifyUser: function(request, response, next){
-        console.log(secret);
-        if(request.pin === "secret"){
+        console.log(request.params);
+        if(request.params.pin === secret && request.params.username === username){
             next();
         }else{
             response.status(401).json({"message":"You're not authorized to be here"});
