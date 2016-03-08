@@ -10,10 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-ui-router": "^0.2.18",
+    "angularjs": "0.0.1",
     "body-parser": "^1.15.0",
-    "cors": "^2.7.1",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
-    "mongojs": "^2.3.0"
+    "jquery": "^2.2.1",
+    "mongoose": "^4.4.6"
   }
 }
