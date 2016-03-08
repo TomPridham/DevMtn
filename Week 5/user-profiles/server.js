@@ -16,12 +16,6 @@ app.use(bodyParser.json());
 app.use(cors(corsOptions));
 app.use(session({"secret": config.sessionSecret}));
 
-var logger = function (req, res, next) {
-    console.log('body --> ', req.body);
-    console.log('params --> ', req.params);
-    next();
-};
-
 app.listen(port, function () {
     console.log('Listening on port', port);
 
