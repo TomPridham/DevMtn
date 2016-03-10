@@ -4,25 +4,16 @@
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var birdSchema = require('./bird');
 //**Consider** adding a hook to create and update an _updatedAt_ field
 
+
 var sightingSchema = new Schema({
-    "name": {
-        type: String,
-        lowercase: true
+    "_user":{
+        type:String,
+        ref:'User'
     },
-    "order": {
-        type: String,
-        maxlength: 20
-    },
-    "status": {
-        type: String,
-        lowercase: true,
-        enum: ["extinct",
-            "near threatened",
-            "least concern"
-        ]
-    },
+    "bird": [birdSchema],
     "confirmed": {
         type: Boolean,
         default: false
